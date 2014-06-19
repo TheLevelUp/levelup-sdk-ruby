@@ -73,8 +73,14 @@ response = api.orders.create(
   user_access_token: 'user-token')
 ```
 
-All other functions of the Ruby SDK mirror the v15 LevelUp API described at http://developer.thelevelup.com/
-as well as a very small number of v14 endpoints.
+The LevelUp Ruby SDK mirrors the API as closely as possible, so the call for any given endpoint can be inferred from its URL.
+For instance:
+```ruby
+api.apps.permissions_requests.create # points to /v15/apps/permissions_requests/ POST
+api.user_addresses.list              # points to /v15/user_addresses/ GET
+api.orders(uuid).refund              # points to /v15/orders/:uuid/refund/ POST
+```
+
 
 ## Errors
 

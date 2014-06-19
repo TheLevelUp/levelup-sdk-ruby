@@ -21,7 +21,7 @@ module Levelup
             OpenStruct.new(error['error'])
           end
         else
-          @errors = ['Could not parse error body']
+          @errors = [{ message: 'Could not parse error body' }]
         end
 
         @status_code = status_code
