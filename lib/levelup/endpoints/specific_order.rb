@@ -2,9 +2,8 @@ module Levelup
   module Endpoints
     # Endpoint holding all functions relating to a specified order.
     class SpecificOrder < Base
-      attr_reader :uuid
       def initialize(order_uuid)
-        @uuid = order_uuid
+        self.uuid = order_uuid
       end
 
       # Refunds the order specified by this endpoint.
@@ -19,6 +18,8 @@ module Levelup
       end
 
       private
+
+      attr_accessor :uuid
 
       def path
         "orders/#{uuid}"

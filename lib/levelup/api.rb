@@ -30,8 +30,12 @@ module Levelup
     end
 
     # Generates an interface for the +apps+ endpoint.
-    def apps
-      Endpoints::Apps.new(app_access_token)
+    def apps(app_id = nil)
+      if app_id
+        Endpoints::SpecificApp.new(app_id)
+      else
+        Endpoints::Apps.new(app_access_token)
+      end
     end
 
     # Verifies if an access token is present for app-authenticated endpoints

@@ -2,6 +2,7 @@
 api_key_valid: key
 secret_valid: secret
 location_id: 123
+app_id: 456
 merchant_token_with_grant_credit_perms: token
 merchant_token_with_manage_orders_perms: token (can be same as other merchant token)
 merchant_api_key: token_v14
