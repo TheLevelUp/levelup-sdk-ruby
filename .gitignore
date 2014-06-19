@@ -5,6 +5,8 @@
 /InstalledFiles
 /pkg/
 /spec/reports/
+/spec/fixtures/keys.yml
+/spec/fixtures/vcr_cassettes
 /test/tmp/
 /test/version_tmp/
 /tmp/
