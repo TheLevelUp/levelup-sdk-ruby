@@ -1,0 +1,16 @@
+#Rename this file to keys.yml once you've supplied the fields below
+api_key_valid: key
+secret_valid: secret
+location_id: 123
+app_id: 456
+merchant_token_with_grant_credit_perms: token
+merchant_token_with_manage_orders_perms: token (can be same as other merchant token)
+merchant_api_key: token_v14
+merchant_username: merchant@email.tld
+merchant_password: password
+user_token_with_create_orders_perms: token
+user_token_with_manage_addresses_perms: token (can be same as other user token)
+user_token_with_read_info_perms: token (can be same as other user token)
+user_token_with_read_orders_perms: token (can be same as other user token)
+user_token_with_read_qr_perms: token (can be same as other user token)
+user_email: user@email.tld
