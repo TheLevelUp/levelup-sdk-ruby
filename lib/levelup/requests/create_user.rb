@@ -3,17 +3,13 @@ module Levelup
     # Represents a request to create a new user with the specified list of
     # permissions.
     class CreateUser < Base
-      attr_accessor :app_access_token
+      include Templates::AppAuthenticated
       # An array of Item objects (or hashes representing them) representing all
       # items purchased by this order.
       attr_accessor :email
       attr_accessor :first_name
       attr_accessor :last_name
       attr_accessor :permission_keynames
-
-      def auth_type
-        :app
-      end
 
       def body
         user_hash = {

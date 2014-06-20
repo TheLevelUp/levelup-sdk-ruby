@@ -7,10 +7,6 @@ module Levelup
       include Templates::MerchantAuthenticated
       attr_accessor :email, :value_amount
 
-      def auth_type
-        :merchant
-      end
-
       def body
         { merchant_funded_credit: to_hash }
       end

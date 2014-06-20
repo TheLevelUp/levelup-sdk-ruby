@@ -81,6 +81,20 @@ api.user_addresses.list              # points to /v15/user_addresses/ GET
 api.orders(uuid).refund              # points to /v15/orders/:uuid/refund/ POST
 ```
 
+## Pagination
+
+Some requests that return large lists are paginated and only return a small number of values per request.
+The LevelUp Ruby SDK handles this by allowing you to request the next page from the paginated response.
+
+For instance:
+```ruby
+locs_response = api.apps(123).locations.list # gets a page of locations associated with an app
+locs_response.locations # => [location 1, location 2...location 10]
+
+locs_response.next_page? # => true if there is another page of results to load
+
+next_page_response = locs_response.next # gets the next page of results
+```
 
 ## Errors
 
@@ -117,17 +131,3 @@ rspec
 4. Commit your changes (`git commit -am 'Add some feature'`)
 5. Push to the branch (`git push origin my-new-feature`)
 6. Create a new Pull Request
-
-## Pagination
-
-Some requests that return large lists are paginated and only return a small number of values per request.
-The LevelUp Ruby SDK handles this by allowing you to request the next page from the paginated response.
-
-For instance:
-```ruby
-locs_response = api.apps(123).locations.list # gets a page of locations associated with an app
-locs_response.locations # => [location 1, location 2...location 10]
-
-locs_response.next_page? # => true if there is another page of results to load
-
-next_page_response = locs_response.next # gets the next page of results

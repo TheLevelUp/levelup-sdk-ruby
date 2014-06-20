@@ -6,6 +6,7 @@ require 'levelup/configuration'
 
 require 'levelup/templates/data_parcel'
 require 'levelup/templates/user_address_data'
+require 'levelup/templates/app_authenticated'
 require 'levelup/templates/merchant_authenticated'
 require 'levelup/templates/merchant_and_user_authenticated'
 require 'levelup/templates/user_authenticated'

@@ -4,7 +4,7 @@ module Levelup
     # requests.
     class PermissionsRequests < Base
       def initialize(app_access_token)
-        @app_access_token = app_access_token
+        self.app_access_token = app_access_token
       end
 
       # Requests a set of permissions from the specified user.
@@ -18,7 +18,7 @@ module Levelup
 
       private
 
-      attr_reader :app_access_token
+      attr_accessor :app_access_token
 
       def path
         'apps/permissions_requests'

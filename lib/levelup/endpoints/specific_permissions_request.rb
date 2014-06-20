@@ -8,9 +8,9 @@ module Levelup
         self.request_id = request_id
       end
 
-      def show
+      def show(app_token = nil)
         request = Requests::ShowPermissionsRequest.
-          new(app_access_token: app_access_token)
+          new(app_access_token: app_access_token || app_token)
         request.send_to_api(:get, endpoint_path)
       end
 

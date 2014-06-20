@@ -15,7 +15,11 @@ module Levelup
       attr_accessor :spend_amount
 
       def body
-        items = @items.map do |item|
+        items = (@items || []).map do |item|
+          if item.empty?
+            next
+          end
+
           { item: item }
         end
 

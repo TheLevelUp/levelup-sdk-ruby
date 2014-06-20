@@ -3,11 +3,7 @@ module Levelup
     # Represents a request to show the status of a specified permissions
     # request.
     class ShowPermissionsRequest < Base
-      attr_accessor :app_access_token
-
-      def auth_type
-        :app
-      end
+      include Templates::AppAuthenticated
 
       def body
         {}

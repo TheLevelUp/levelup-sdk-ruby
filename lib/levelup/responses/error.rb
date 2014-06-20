@@ -21,7 +21,8 @@ module Levelup
             OpenStruct.new(error['error'])
           end
         else
-          @errors = [{ message: 'Could not parse error body' }]
+          @errors = [OpenStruct.new(message: 'The API returned an unexpected '\
+            'response. This is likely due to an incorrectly defined base URL.')]
         end
 
         @status_code = status_code
