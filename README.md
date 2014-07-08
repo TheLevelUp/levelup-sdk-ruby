@@ -66,8 +66,15 @@ response = api.orders.create(
   spend_amount: 350, # in cents; 350 = $3.50
   items: [
     {
-      # item data
+      charged_price: 350,
+      description: 'Non-poisonous, supplies vital nutrients',
+      name: 'Food',
+      quantity: 1,
+      sku: '123abc',
+      category: 'Edible Things',
+      standard_price: 350
     }
+    # more items can go here
   ],
   merchant_access_token: 'merchant-token',
   user_access_token: 'user-token')
