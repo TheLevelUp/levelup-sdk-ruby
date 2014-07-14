@@ -14,6 +14,10 @@ module Levelup
         LocationOrders.new(id)
       end
 
+      def credit
+        LocationCredit.new(id)
+      end
+
       private
 
       def path

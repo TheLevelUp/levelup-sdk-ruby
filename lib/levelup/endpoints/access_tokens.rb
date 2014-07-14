@@ -8,9 +8,9 @@ module Levelup
       # The client secret assigned to your app. Preconfigured key.
       attr_writer :secret
 
-      def initialize(api_key: nil, secret: nil)
-        @api_key = api_key
-        @secret = secret
+      def initialize(auth_info)
+        @api_key = auth_info[:api_key]
+        @secret = auth_info[:secret]
       end
 
       # Generates a new app access token. If passed no parameters, attempts to

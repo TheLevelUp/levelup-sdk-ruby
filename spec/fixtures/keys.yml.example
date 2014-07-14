@@ -13,4 +13,5 @@ user_token_with_manage_addresses_perms: token (can be same as other user token)
 user_token_with_read_info_perms: token (can be same as other user token)
 user_token_with_read_orders_perms: token (can be same as other user token)
 user_token_with_read_qr_perms: token (can be same as other user token)
+user_token_with_manage_campaigns_perms: token (can be same as other user token)
 user_email: user@email.tld

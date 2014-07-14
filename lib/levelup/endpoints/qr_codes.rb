@@ -2,10 +2,10 @@ module Levelup
   module Endpoints
     # The endpoint holding all functions related to managing users' QR codes.
     class QrCodes < Base
-      def initialize(color: 0, tip_amount: 0, tip_percent: 0)
-        self.color = color
-        self.tip_amount = tip_amount
-        self.tip_percent = tip_percent
+      def initialize(options = {})
+        self.color = options[:color] || 0
+        self.tip_amount = options[:tip_amount] || 0
+        self.tip_percent = options[:tip_percent] || 0
       end
 
       # Retrieves the specified user's QR code using parameters specified
