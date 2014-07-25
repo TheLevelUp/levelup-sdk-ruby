@@ -37,9 +37,9 @@ describe 'Levelup::Responses::Error' do
       it 'has two full errors' do
         expect(@nonempty_response).to have(2).errors
         @nonempty_response.errors.each do |error|
-          expect(error['property']).to_not be_nil
-          expect(error['object']).to_not be_nil
-          expect(error['message']).to_not be_nil
+          expect(error.property).to_not be_nil
+          expect(error.object).to_not be_nil
+          expect(error.message).to_not be_nil
         end
       end
     end

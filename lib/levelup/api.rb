@@ -15,10 +15,10 @@ module Levelup
 
     # Accepts any combination of the listed parameters, though +api_key+ and
     # +secret+ work in tandem.
-    def initialize(app_access_token: nil, api_key: nil, secret: nil)
-      self.app_access_token = app_access_token
-      self.api_key = api_key
-      self.secret = secret
+    def initialize(options = {})
+      self.app_access_token = options[:app_access_token]
+      self.api_key = options[:api_key]
+      self.secret = options[:secret]
     end
 
     # Generates an interface for the +access_tokens+ endpoint.
