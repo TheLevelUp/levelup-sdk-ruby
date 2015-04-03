@@ -1,6 +1,6 @@
 module Levelup
   class Configuration
-    VERSION = '0.9.4'
+    VERSION = '0.9.5'
     DEFAULT_API_VERSION = :v15
 
     class << self
