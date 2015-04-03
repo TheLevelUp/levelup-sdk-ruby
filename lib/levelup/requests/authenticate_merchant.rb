@@ -1,7 +1,6 @@
 module Levelup
   module Requests
-    # Represents a request to generate a merchant access
-    # token.
+    # Represents a request to generate a merchant access token.
     class AuthenticateMerchant < Base
       # Your merchant's API key (accepts app API key as well)
       attr_accessor :api_key

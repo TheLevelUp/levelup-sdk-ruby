@@ -1,8 +1,7 @@
 module Levelup
   module Requests
-    # Represents a request to list all orders made at a
-    # specified location. This is a v14 request and should not be expected to
-    # remain functional indefinitely.
+    # Represents a request to list all orders made at a specified location.
+    # This is a v14 request and should not be expected to remain functional indefinitely.
     class ListOrders < Base
       include Templates::MerchantAuthenticated
 

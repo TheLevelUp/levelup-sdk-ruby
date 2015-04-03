@@ -13,8 +13,7 @@ describe 'Levelup::Endpoints::LocationCredit', vcr: true do
 
     context 'with an invalid user token' do
       it 'returns an error response' do
-        response = @test_client.locations(TestConfig.location_id).credit.
-          get('1234')
+        response = @test_client.locations(TestConfig.location_id).credit.get('1234')
         expect(response).to_not be_success
       end
     end

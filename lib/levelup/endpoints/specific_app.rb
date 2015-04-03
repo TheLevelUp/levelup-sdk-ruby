@@ -1,7 +1,6 @@
 module Levelup
   module Endpoints
-    # The endpoint serving as a bucket for all functions related to a specific
-    # app.
+    # The endpoint serving as a bucket for all functions related to a specific app.
     class SpecificApp < Base
       def initialize(id)
         self.id = id

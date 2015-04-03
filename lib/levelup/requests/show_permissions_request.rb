@@ -1,7 +1,6 @@
 module Levelup
   module Requests
-    # Represents a request to show the status of a specified permissions
-    # request.
+    # Represents a request to show the status of a specified permissions request.
     class ShowPermissionsRequest < Base
       include Templates::AppAuthenticated
 

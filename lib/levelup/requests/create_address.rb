@@ -1,8 +1,7 @@
- module Levelup
+module Levelup
   module Requests
-    # Represents a request to create an address for a
-    # specific user. For information about its parameters, see UserAddressData
-    # and UserAuthenticated.
+    # Represents a request to create an address for a specific user.
+    # For information about its parameters, see UserAddressData and UserAuthenticated.
     class CreateAddress < Base
       include Templates::UserAddressData
       include Templates::UserAuthenticated

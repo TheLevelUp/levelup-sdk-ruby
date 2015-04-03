@@ -33,8 +33,7 @@ describe 'Levelup::Endpoints::UserAddresses', vcr: true do
           TestConfig.user_token_with_manage_addresses_perms
         response = @test_client.user_addresses.create(test_request)
         expect(response).to be_success
-        expect(response.street_address).
-          to eq(@test_address_hash[:street_address])
+        expect(response.street_address).to eq(@test_address_hash[:street_address])
       end
     end
   end

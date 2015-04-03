@@ -35,8 +35,7 @@ describe 'Levelup::Responses::SuccessPaginated', vcr: true do
   describe '#next' do
     context 'with no next page' do
       it 'raises an InvalidRequest error' do
-        expect { @no_next_response.next }.
-          to raise_error(Levelup::Errors::InvalidRequest)
+        expect { @no_next_response.next }.to raise_error(Levelup::Errors::InvalidRequest)
       end
     end
 

@@ -1,13 +1,10 @@
 module Levelup
   module Endpoints
     # The endpoint holding all functions relating to a single merchant. This is
-    # a v14 endpoint and should not be expected to remain functional
-    # indefinitely.
+    # a v14 endpoint and should not be expected to remain functional indefinitely.
     class SpecificMerchant < Base
-      attr_reader :id
-
       def initialize(merchant_id)
-        @id = merchant_id
+        self.id = merchant_id
       end
 
       def locations
@@ -19,6 +16,8 @@ module Levelup
       end
 
       private
+
+      attr_accessor :id
 
       def path
         "merchants/#{id}"

@@ -14,8 +14,7 @@ describe 'Levelup::Requests::RequestPermissions' do
 
   describe '#body' do
     it 'returns a hash wrapped in a permissions_request tag' do
-      expect(@test_user_permissions_request.body[:permissions_request]).
-        to_not be_nil
+      expect(@test_user_permissions_request.body[:permissions_request]).to eq({})
     end
   end
 end

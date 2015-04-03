@@ -58,8 +58,7 @@ describe 'Levelup::Endpoints::AccessTokens', vcr: true do
             password: TestConfig.merchant_password
           )
 
-        response = @test_client.access_tokens.
-          create_for_merchant(merchant_auth_request)
+        response = @test_client.access_tokens.create_for_merchant(merchant_auth_request)
         expect(response).to be_success
         expect(response.token).to_not be_nil
       end
@@ -72,8 +71,7 @@ describe 'Levelup::Endpoints::AccessTokens', vcr: true do
           username: 'username_wrong',
           password: 'password1'
         )
-        response = @test_client.access_tokens.
-          create_for_merchant(merchant_auth_request)
+        response = @test_client.access_tokens.create_for_merchant(merchant_auth_request)
         expect(response).to_not be_success
       end
     end

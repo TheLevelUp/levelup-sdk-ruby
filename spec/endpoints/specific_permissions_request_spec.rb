@@ -15,8 +15,7 @@ describe 'Levelup::Endpoints::SpecificPermissionsRequest', vcr: true do
         permission_keynames: ['read_user_basic_info']
       )
 
-      response = @test_client.apps.permissions_requests(perms_request.id).
-        show
+      response = @test_client.apps.permissions_requests(perms_request.id).show
       expect(response).to be_success
       expect(response.permission_keynames).to eq(['read_user_basic_info'])
     end

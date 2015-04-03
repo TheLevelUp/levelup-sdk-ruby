@@ -1,7 +1,6 @@
 module Levelup
   module Endpoints
-    # The endpoint holding all functions related to managing permissions
-    # requests.
+    # The endpoint holding all functions related to managing permissions requests.
     class PermissionsRequests < Base
       def initialize(app_access_token)
         self.app_access_token = app_access_token

@@ -1,8 +1,7 @@
 module Levelup
   module Requests
-    # Represents a request to add the first credit card to a specified user
-    # account. User access token must have the create_first_credit_card
-    # permission.
+    # Represents a request to add the first credit card to a specified user account.
+    # User access token must have the create_first_credit_card permission.
     class CreateCard < Base
       include Templates::UserAuthenticated
 

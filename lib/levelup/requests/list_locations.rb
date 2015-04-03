@@ -1,8 +1,7 @@
 module Levelup
   module Requests
-    # Represents a request to list all locations under
-    # a specified merchant. This is a v14 endpoint and should not be expected to
-    # remain functional indefinitely.
+    # Represents a request to list all locations under a specified merchant.
+    # This is a v14 endpoint and should not be expected to remain functional indefinitely.
     class ListLocations < Base
       include Templates::MerchantAuthenticated
 

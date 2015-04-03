@@ -1,7 +1,6 @@
 module Levelup
   module Requests
-    # Represents a request to list all locations under
-    # a specified app. The list is paginated.
+    # Represents a request to list all locations under a specified app. The list is paginated.
     class ListAppLocations < Base
       def auth_type
         :none

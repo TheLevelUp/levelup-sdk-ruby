@@ -1,7 +1,6 @@
 module Levelup
   module Endpoints
-    # The endpoint holding all functions related to managing users under the
-    # current app.
+    # The endpoint holding all functions related to managing users under the current app.
     class AppUsers < Base
       def initialize(app_access_token)
         @app_access_token = app_access_token
@@ -11,11 +10,6 @@ module Levelup
         request = build_request(create_user_request, Requests::CreateUser)
         request.app_access_token ||= app_access_token
         request.send_to_api(:post, endpoint_path)
-      end
-
-      def get(user_access_token)
-        request = Requests::GetUser.new(user_access_token: user_access_token)
-        request.send_to_api(:get, endpoint_path)
       end
 
       private

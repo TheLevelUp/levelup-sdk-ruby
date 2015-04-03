@@ -1,7 +1,6 @@
 module Levelup
   module Responses
-    # Class that encapsulates a successful response from a paginated endpoint
-    # of the LevelUp API.
+    # Class that encapsulates a successful response from a paginated endpoint of the LevelUp API.
     class SuccessPaginated < Success
       attr_writer :next_page_request, :next_page
 

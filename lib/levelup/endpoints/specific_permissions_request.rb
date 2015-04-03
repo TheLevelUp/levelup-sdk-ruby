@@ -1,7 +1,6 @@
 module Levelup
   module Endpoints
-    # The endpoint holding all functions related to accessing a specified
-    # permissions request.
+    # The endpoint holding all functions related to accessing a specified permissions request.
     class SpecificPermissionsRequest < Base
       def initialize(request_id, app_access_token)
         self.app_access_token = app_access_token
@@ -9,9 +8,8 @@ module Levelup
       end
 
       def show(app_token = nil)
-        request = Requests::ShowPermissionsRequest.
-          new(app_access_token: app_access_token || app_token)
-        request.send_to_api(:get, endpoint_path)
+        Requests::ShowPermissionsRequest.new(app_access_token: app_access_token || app_token).
+          send_to_api(:get, endpoint_path)
       end
 
       private

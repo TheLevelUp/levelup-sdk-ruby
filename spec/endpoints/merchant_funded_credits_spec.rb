@@ -6,8 +6,7 @@ describe 'Levelup::Endpoints::MerchantFundedCredits', vcr: true do
       response = @test_client.merchant_funded_credits.give(
         email: 'pos@thelevelup.com',
         value_amount: 5,
-        merchant_access_token: TestConfig.
-          merchant_token_with_grant_credit_perms
+        merchant_access_token: TestConfig.merchant_token_with_grant_credit_perms
       )
 
       expect(response).to be_success

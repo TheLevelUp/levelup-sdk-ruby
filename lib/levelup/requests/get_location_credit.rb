@@ -1,7 +1,6 @@
 module Levelup
   module Requests
-    # Represents a request to access information about a
-    # specific order under a merchant.
+    # Represents a request to access information about a specific order under a merchant.
     class GetLocationCredit < Base
       include Templates::UserAuthenticated
 

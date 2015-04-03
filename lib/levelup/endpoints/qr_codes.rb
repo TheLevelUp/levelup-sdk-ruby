@@ -8,11 +8,10 @@ module Levelup
         self.tip_percent = options[:tip_percent] || 0
       end
 
-      # Retrieves the specified user's QR code using parameters specified
-      # in the endpoint.
+      # Retrieves the specified user's QR code using parameters specified in the endpoint.
       def get(user_access_token)
-        request = Requests::GetQrCode.new(user_access_token: user_access_token)
-        request.send_to_api(:get, endpoint_path)
+        Requests::GetQrCode.new(user_access_token: user_access_token).
+          send_to_api(:get, endpoint_path)
       end
 
       private

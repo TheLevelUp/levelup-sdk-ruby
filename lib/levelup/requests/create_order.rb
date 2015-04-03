@@ -1,7 +1,6 @@
 module Levelup
   module Requests
-    # Represents a request to create an order for the specified user at the
-    # specified merchant.
+    # Represents a request to create an order for the specified user at the specified merchant.
     class CreateOrder < Base
       include Templates::MerchantAndUserAuthenticated
       # An array of Item objects (or hashes representing them) representing all

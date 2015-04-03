@@ -1,7 +1,7 @@
 module Levelup
   module Requests
     # Represents a request to access information about a specific order under a merchant.
-    class GetOrder < Base
+    class GetLocationMerchantFundedCredit < Base
       include Templates::MerchantAuthenticated
 
       def auth_type
@@ -9,7 +9,7 @@ module Levelup
       end
 
       def response_from_hash(hash)
-        Responses::Success.new(hash['order'])
+        Responses::Success.new hash['merchant_funded_credit']
       end
     end
   end

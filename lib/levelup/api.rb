@@ -3,8 +3,7 @@
 # of utilizing LevelUp for online ordering and web payments.
 
 module Levelup
-  # This API is the base class that handles all requests made to the LevelUp
-  # API.
+  # This is the base class that handles all requests made to the LevelUp API.
   class Api
     # Token to access app-authenticated endpoints
     attr_writer :app_access_token

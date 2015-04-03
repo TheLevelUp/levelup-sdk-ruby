@@ -17,8 +17,8 @@ describe 'Levelup::Endpoints::MerchantLocations', vcr: true do
   describe '#list' do
     context 'with a valid merchant' do
       it 'returns a successful list-locations response' do
-        response = @test_client.merchants(@test_merchant_id).locations.
-          list(@test_merchant_auth_token)
+        response = @test_client.merchants(@test_merchant_id).locations.list(
+          @test_merchant_auth_token)
         expect(response).to be_success
         expect(response.locations).to_not be_nil
       end
@@ -26,8 +26,8 @@ describe 'Levelup::Endpoints::MerchantLocations', vcr: true do
 
     context 'with an invalid merchant' do
       it 'returns an error response' do
-        response = @test_client.merchants(-25).locations.
-          list(@test_merchant_auth_token)
+        response = @test_client.merchants(-25).locations.list(
+          @test_merchant_auth_token)
         expect(response).to_not be_success
       end
     end

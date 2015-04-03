@@ -4,8 +4,7 @@ describe 'Levelup::Endpoints::SpecificOrder', vcr: true do
   describe '#refund' do
     context 'with an invalid UUID' do
       it 'returns an error response' do
-        response = @test_client.orders('0').
-          refund(@merchant_token_with_create_privs)
+        response = @test_client.orders('0').refund(@merchant_token_with_create_privs)
         expect(response).to_not be_success
       end
     end
@@ -23,8 +22,8 @@ describe 'Levelup::Endpoints::SpecificOrder', vcr: true do
         )
         expect(order_response).to be_success
 
-        refund_response = @test_client.orders(order_response.uuid).
-          refund(TestConfig.merchant_token_with_manage_orders_perms)
+        refund_response = @test_client.orders(order_response.uuid).refund(
+          TestConfig.merchant_token_with_manage_orders_perms)
         expect(refund_response).to be_success
         expect(refund_response.uuid).to eq(order_response.uuid)
       end

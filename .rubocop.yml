@@ -1,16 +1,11 @@
 # Rubocop comes with most cops enabled and some disabled by default.
-# Our style guide does not match these defaults, so we explicitly enable/disable each cop below.
-# We should add an entry for any cop introduced via Rubocop updates
-# (with 'rubocop --auto-gen-config' helping out)
+# Our style guide does not match these defaults, so we explicitly enable/disable some cops below.
 
-AccessModifierIndentation:
-  Enabled: true
+AbcSize:
+  Enabled: false
 
 AccessorMethodName:
   Enabled: false
-
-Alias:
-  Enabled: true
 
 AlignArray:
   Enabled: false
@@ -21,177 +16,66 @@ AlignHash:
 AlignParameters:
   Enabled: false
 
-AndOr:
-  Enabled: true
+AmbiguousOperator:
+  Enabled: false
 
-AsciiComments:
-  Enabled: true
-
-AsciiIdentifiers:
-  Enabled: true
+AmbiguousRegexpLiteral:
+  Enabled: false
 
 AssignmentInCondition:
   Enabled: false
 
-Attr:
-  Enabled: true
-
-BeginBlock:
-  Enabled: true
-
-BlockAlignment:
-  Enabled: false
-
-BlockComments:
-  Enabled: true
-
-BlockNesting:
-  Enabled: false
-
-Blocks:
-  Enabled: false
-
-BracesAroundHashParameters:
-  Enabled: false
-
-CaseEquality:
-  Enabled: true
-
 CaseIndentation:
+  IndentWhenRelativeTo: end
+
+ClassAndModuleChildren:
   Enabled: false
-
-CharacterLiteral:
-  Enabled: true
-
-ClassAndModuleCamelCase:
-  Enabled: true
 
 ClassLength:
   Enabled: false
 
-ClassMethods:
-  Enabled: true
-
-ClassVars:
-  Enabled: true
-
 CollectionMethods:
-  Enabled: false
-
-ColonMethodCall:
-  Enabled: true
-
-CommentAnnotation:
-  Enabled: true
-
-ConstantName:
   Enabled: false
 
 CyclomaticComplexity:
   Enabled: false
 
-Debugger:
-  Enabled: true
-
-DefaultScope:
-  Enabled: true
-
-DefWithParentheses:
-  Enabled: true
+Delegate:
+  Enabled: false
 
 Documentation:
   Enabled: false
 
 DotPosition:
+  EnforcedStyle: leading
   Enabled: false
 
-EmptyEnsure:
-  Enabled: true
-
-EmptyLineBetweenDefs:
+DoubleNegation:
   Enabled: false
-
-EmptyLines:
-  Enabled: true
-
-EmptyLinesAroundAccessModifier:
-  Enabled: true
 
 EmptyLineBetweenDefs:
   AllowAdjacentOneLineDefs: true
-  Enabled: true
-
-EmptyLinesAroundBody:
-  Enabled: true
-
-EmptyLiteral:
-  Enabled: true
-
-Encoding:
-  Enabled: true
 
 EndAlignment:
+  AlignWith: variable
+
+FormatString:
+  EnforcedStyle: percent
+
+GuardClause:
   Enabled: false
-
-EndBlock:
-  Enabled: true
-
-EndInMethod:
-  Enabled: true
-
-EndOfLine:
-  Enabled: true
-
-EnsureReturn:
-  Enabled: true
-
-Eval:
-  Enabled: true
-
-EvenOdd:
-  Enabled: true
-
-FavorJoin:
-  Enabled: true
-
-FavorSprintf:
-  Enabled: false
-
-FavorUnlessOverNegatedIf:
-  Enabled: true
-
-FavorUntilOverNegatedWhile:
-  Enabled: true
-
-FlipFlop:
-  Enabled: true
-
-FinalNewline:
-  Enabled: true
-
-For:
-  Enabled: true
-
-GlobalVars:
-  Enabled: true
 
 HandleExceptions:
   Enabled: false
 
 HasAndBelongsToMany:
-  Enabled: true
-
-HashMethods:
-  Enabled: true
-
-HashSyntax:
-  Enabled: true
+  Enabled: false
 
 IfUnlessModifier:
   Enabled: false
 
-IfWithSemicolon:
-  Enabled: true
+IndentHash:
+  Enabled: false
 
 IndentationWidth:
   Enabled: false
@@ -199,18 +83,8 @@ IndentationWidth:
 Lambda:
   Enabled: false
 
-LambdaCall:
-  Enabled: true
-
-LeadingCommentSpace:
-  Enabled: true
-
 LineLength:
-  Enabled: true
-  Max: 80 #differs from platform spec because it's open source
-
-LiteralInCondition:
-  Enabled: true
+  Max: 100
 
 Loop:
   Enabled: false
@@ -218,210 +92,63 @@ Loop:
 MethodCalledOnDoEndBlock:
   Enabled: false
 
-MethodCallParentheses:
-  Enabled: true
-
 MethodLength:
   Enabled: false
 
-MethodName:
-  Enabled: true
+MultilineOperationIndentation:
+  Enabled: false
 
-ModuleFunction:
-  Enabled: true
-
-MultilineBlockChain:
-  Enabled: true
-
-MultilineIfThen:
-  Enabled: true
-
-MultilineTernaryOperator:
-  Enabled: true
-
-NestedTernaryOperator:
-  Enabled: true
-
-NilComparison:
-  Enabled: true
-
-Not:
-  Enabled: true
+Next:
+  Enabled: false
 
 NumericLiterals:
   Enabled: false
 
-OneLineConditional:
-  Enabled: true
-
-OpMethod:
-  Enabled: true
-
-Output:
-  Enabled: true
-
 ParameterLists:
   Enabled: false
-
-ParenthesesAroundCondition:
-  Enabled: true
 
 ParenthesesAsGroupedExpression:
   Enabled: false
 
-PerlBackrefs:
+PerceivedComplexity:
   Enabled: false
 
 PredicateName:
   Enabled: false
 
-Proc:
-  Enabled: false
-
-RaiseArgs:
-  Enabled: true
-
-ReadAttribute:
-  Enabled: true
-
-RedundantBegin:
-  Enabled: true
-
-RedundantException:
-  Enabled: true
-
-RedundantReturn:
-  Enabled: true
-
-RedundantSelf:
-  Enabled: true
-
 RegexpLiteral:
   Enabled: false
-
-RescueException:
-  Enabled: true
 
 RescueModifier:
   Enabled: false
 
-Semicolon:
-  Enabled: true
-
-ShadowingOuterLocalVariable:
-  Enabled: true
-
 SignalException:
   Enabled: false
 
-SingleLineBlockParams:
-  Enabled: true
-
-SingleLineMethods:
-  Enabled: true
-
 SpaceAfterColon:
-  Enabled: true
-
-SpaceAfterComma:
-  Enabled: true
-
-SpaceAfterControlKeyword:
-  Enabled: true
-
-SpaceAfterMethodName:
-  Enabled: true
-
-SpaceAfterNot:
-  Enabled: true
-
-SpaceAfterSemicolon:
-  Enabled: true
-
-SpaceAroundBlockBraces:
-  Enabled: true
-  EnforcedStyle: space_inside_braces
-  EnforcedStyleForEmptyBraces: no_space
-  SpaceBeforeBlockParameters: true
-
-SpaceAroundEqualsInParameterDefault:
-  Enabled: true
-
-SpaceAroundOperators:
-  Enabled: true
-
-SpaceBeforeModifierKeyword:
-  Enabled: true
-
-SpaceInsideBrackets:
-  Enabled: true
-
-SpaceInsideHashLiteralBraces:
-  Enabled: true
-
-SpaceInsideParens:
-  Enabled: true
-
-SpecialGlobalVars:
-  Enabled: true
-
-StringLiterals:
   Enabled: false
-
-SymbolArray:
-  Enabled: false
-
-Syntax:
-  Enabled: false
-
-Tab:
-  Enabled: true
-
-TrailingBlankLines:
-  Enabled: true
-
-TrailingWhitespace:
-  Enabled: true
 
 TrivialAccessors:
   Enabled: false
 
-UnlessElse:
-  Enabled: true
+UnusedBlockArgument:
+  Enabled: false
 
-UnreachableCode:
-  Enabled: true
+UnusedMethodArgument:
+  Enabled: false
 
 UselessAssignment:
   Enabled: false
 
-UselessComparison:
-  Enabled: true
-
-UselessSetterCall:
-  Enabled: true
-
 Validation:
-  Enabled: true
-
-VariableInterpolation:
-  Enabled: true
-
-VariableName:
-  Enabled: true
-  EnforcedStyle: snake_case
-
-Void:
   Enabled: false
 
-WhenThen:
-  Enabled: true
-
-WhileUntilDo:
-  Enabled: true
+# Can be enabled when we switch to RSpec "expect.to" syntax:
+Void:
+  Enabled: false
 
 WhileUntilModifier:
   Enabled: false
 
 WordArray:
-  Enabled: false
+  MinSize: 3

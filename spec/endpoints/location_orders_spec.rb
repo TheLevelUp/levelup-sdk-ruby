@@ -16,8 +16,8 @@ describe 'Levelup::Endpoints::LocationOrders', vcr: true do
   describe '#list' do
     context 'with a valid location' do
       it 'returns a list of orders' do
-        response = @test_client.locations(TestConfig.location_id).
-          orders.list(@test_merchant_auth_token)
+        response = @test_client.locations(TestConfig.location_id).orders.
+          list(@test_merchant_auth_token)
         expect(response).to be_success
         expect(response.orders).to_not be_nil
       end
@@ -25,8 +25,7 @@ describe 'Levelup::Endpoints::LocationOrders', vcr: true do
 
     context 'with an invalid location' do
       it 'returns an error response' do
-        response = @test_client.locations(-25).orders.
-          list(@test_merchant_auth_token)
+        response = @test_client.locations(-25).orders.list(@test_merchant_auth_token)
         expect(response).to_not be_success
       end
     end
