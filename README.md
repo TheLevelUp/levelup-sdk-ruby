@@ -1,3 +1,5 @@
+**DEPRECATION WARNING:** This gem is now deprecated. Please do not use it for new projects since it is unmaintained.
+
 # LevelUp Ruby SDK
 
 Early alpha version of the LevelUp Ruby SDK - designed for e-commerce and online

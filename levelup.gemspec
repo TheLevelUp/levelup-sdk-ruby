@@ -8,7 +8,10 @@ Gem::Specification.new do |spec|
   spec.authors       = ['LevelUp POS Team']
   spec.email         = ['pos-support@thelevelup.com']
   spec.summary       = %q(A Ruby client for communicating with the LevelUp API)
-  spec.description   = %q(A tool to simplify, streamline, and quickly
+  spec.description   = %q(DEPRECATION WARNING: This gem is now deprecated.
+    Please do not use it for new projects since it is unmaintained.
+
+    A tool to simplify, streamline, and quickly
     communicate with the LevelUp REST API, allowing for companies to easily
     implement the ability to pay with LevelUp on their e-commerce platforms.)
   spec.homepage      = 'http://developer.thelevelup.com'
